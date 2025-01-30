@@ -47,7 +47,7 @@ class CatalogController extends Controller
         $pelicula->poster = $request->input('poster');
         $pelicula->synopsis = $request->input('synopsis');
         $pelicula->save();
-        return view('/catalog', ['arrayPeliculas' => $pelicula])->with('id', $pelicula->id);
+        return view('/catalog.show', ['arrayPeliculas' => $pelicula])->with('id', $pelicula->id)->with('msg', 5);
     }
 
     public function putEdit(Request $request, $id)
@@ -76,7 +76,7 @@ class CatalogController extends Controller
         $pelicula = Movie::findOrFail($id);
         $pelicula->rented = 0;
         $pelicula->save();
-        return redirect('/catalog/show/' . $id)->with('msg', 0);
+        return redirect('/catalog/show/' . $id)->with('msg', 4);
     }
 
     public function deleteMovie($id)

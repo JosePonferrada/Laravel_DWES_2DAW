@@ -37,7 +37,9 @@ Route::post('/catalog/create', [CatalogController::class, 'postCreate'])->name('
 Route::get('/catalog/edit/{id?}', [CatalogController::class, 'getEdit'])->name('edit');
 Route::put('/catalog/edit/{id?}', [CatalogController::class, 'putEdit'])->name('update');
 
-Route::delete('/catalog/edit/{id?}', [CatalogController::class, 'deleteMovie'])->name('delete');
+Route::delete('/catalog/delete/{id?}', [CatalogController::class, 'deleteMovie'])->name('delete');
+Route::put('/catalog/rent/{id?}', [CatalogController::class, 'putRent'])->name('rent');
+Route::put('/catalog/return/{id?}', [CatalogController::class, 'putReturn'])->name('return');
 
 /* Route::get('/catalog/edit/{id}', function ($id) {
     return view('catalog.edit', ['id' => $id]);

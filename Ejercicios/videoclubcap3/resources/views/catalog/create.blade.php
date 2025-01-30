@@ -18,7 +18,8 @@
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="overflow-hidden bg-white shadow-sm dark:bg-gray-800 sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <form action="#" method="POST">
+                    <form action=" {{ url('/catalog/create') }}" method="POST">
+                        @csrf
                         <div class="mb-6">
                             <label for="titulo"
                                 class="block mb-2 font-medium text-gray-900 dark:text-white">Título</label>
@@ -55,7 +56,7 @@
                                 placeholder="Resumen de la película..."></textarea>
                         </div>
                         <div class="flex justify-end">
-                            <button type="button" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Agregar
+                            <button type="submit" class="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Agregar
                                 película</button>
                         </div>
                     </form>

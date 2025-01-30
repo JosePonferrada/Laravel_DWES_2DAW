@@ -18,10 +18,9 @@
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="overflow-hidden bg-white shadow-sm dark:bg-gray-800 sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <form action="#" method="POST">
-
+                    <form action="{{ url('/catalog/edit/' . $id) }}" method="POST">
+                        @csrf
                         @method('PUT')
-
                         <div class="mb-6">
                             <label for="titulo"
                                 class="block mb-2 font-medium text-gray-900 dark:text-white">Título</label>
@@ -60,14 +59,9 @@
                                 placeholder="Resumen de la película...">{{ $arrayPeliculas->synopsis }}</textarea>
                         </div>
                         <div class="flex justify-end">
-                            <form action="{{ url('/catalog/edit/' . $id) }}" method="POST">
-                                @csrf
-                                @method('PUT')
                                 <button type="submit"
                                     class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Editar
-                                    película</button>
-                            </form>
-                            
+                                    película</button>                           
                         </div>
                     </form>
                 </div>
