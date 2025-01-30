@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\FormFrutasRequest;
 use Illuminate\Support\Facades\DB;
+use App\Models\Fruta;
 use Illuminate\Http\Request;
 
 class FrutasController extends Controller
@@ -20,7 +21,8 @@ class FrutasController extends Controller
     }
 
     public function peras(){
-        return "Peras";
+        $frutas = Fruta::all();
+        return view('frutas.peras')->with('frutas', $frutas);
     }
 
     public function store(FormFrutasRequest $request){

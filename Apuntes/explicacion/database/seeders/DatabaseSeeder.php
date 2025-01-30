@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Fruta;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use DB;
@@ -14,9 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        User::factory(10)->create();
 
-        User::factory()->create([
+        Fruta::factory(100)->create();
+
+        /* User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
@@ -44,6 +47,6 @@ class DatabaseSeeder extends Seeder
                 'temporada' => 3,
                 'pais' => 'España'
             ],
-        ]);
+        ]); */
     }
 }
