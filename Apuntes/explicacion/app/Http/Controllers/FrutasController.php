@@ -21,8 +21,10 @@ class FrutasController extends Controller
     }
 
     public function peras(){
-        $frutas = Fruta::all();
-        return view('frutas.peras')->with('frutas', $frutas);
+        //$frutas = Fruta::all(); // Encuentra todos los registros de la tabla frutas
+        //return view('frutas.peras')->with('frutas', $frutas);
+        $fruta = Fruta::find(1); // Encuentra el registro con id 1
+        return view('frutas.peras')->with('fruta', $fruta);
     }
 
     public function store(FormFrutasRequest $request){
