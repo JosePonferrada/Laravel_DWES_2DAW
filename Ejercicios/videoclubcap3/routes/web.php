@@ -27,6 +27,7 @@ Route::get('/catalog/show/{id?}', [CatalogController::class, 'getShow'])->name('
 
 // Para llamar a la vista /catalog/create con el método create de CatalogController
 Route::get('/catalog/create', [CatalogController::class, 'getCreate'])->name('create');
+Route::post('/catalog/create', [CatalogController::class, 'postCreate'])->name('store');
 
 /* Route::get('/catalog/create', function () {
     return view('catalog.create');
@@ -34,6 +35,9 @@ Route::get('/catalog/create', [CatalogController::class, 'getCreate'])->name('cr
 
 // Para llamar a la vista /catalog/edit con el método edit de CatalogController
 Route::get('/catalog/edit/{id?}', [CatalogController::class, 'getEdit'])->name('edit');
+Route::put('/catalog/edit/{id?}', [CatalogController::class, 'putEdit'])->name('update');
+
+Route::delete('/catalog/edit/{id?}', [CatalogController::class, 'deleteMovie'])->name('delete');
 
 /* Route::get('/catalog/edit/{id}', function ($id) {
     return view('catalog.edit', ['id' => $id]);

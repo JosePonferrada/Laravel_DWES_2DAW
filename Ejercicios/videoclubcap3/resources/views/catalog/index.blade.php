@@ -20,9 +20,9 @@
                 <div class="grid grid-cols-4">
                     @foreach ($arrayPeliculas as $key => $pelicula)
                         <div class="text-center">
-                            <a href="{{ url('catalog/show/' . $key) }}">
-                                <img src="{{ $pelicula['poster'] }}" class="h-[350px] mx-auto block">
-                                <h4 class="min-h-[45px] mt-1 mb-2"> {{ $pelicula['title'] }} </h4>
+                            <a href="{{ url('catalog/show/' . $pelicula->id) }}">
+                                <img src="{{ $pelicula->poster }}" class="h-[350px] mx-auto block">
+                                <h4 class="min-h-[45px] mt-1 mb-2"> {{ $pelicula->title }} </h4>
                             </a>
                         </div>
                     @endforeach
