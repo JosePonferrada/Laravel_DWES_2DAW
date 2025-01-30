@@ -11,7 +11,7 @@ class CatalogController extends Controller
             'title' => 'El padrino',
             'year' => '1972',
             'director' => 'Francis Ford Coppola',
-            'poster' => 'http://ia.media-imdb.com/images/M/MV5BMjEyMjcyNDI4MF5BMl5BanBnXkFtZTcwMDA5Mzg3OA@@._V1_SX214_AL_.jpg',
+            'poster' => 'https://pics.filmaffinity.com/the_godfather-488102675-mmed.jpg',
             'rented' => false,
             'synopsis' => 'Don Vito Corleone (Marlon Brando) es el respetado y temido jefe de una de las cinco familias de la mafia de Nueva York. Tiene cuatro hijos: Connie (Talia Shire), el impulsivo Sonny (James Caan), el pusilánime Freddie (John Cazale) y Michael (Al Pacino), que no quiere saber nada de los negocios de su padre. Cuando Corleone, en contra de los consejos de \'Il consigliere\' Tom Hagen (Robert Duvall), se niega a intervenir en el negocio de las drogas, el jefe de otra banda ordena su asesinato. Empieza entonces una violenta y cruenta guerra entre las familias mafiosas.'
         ),
@@ -19,7 +19,7 @@ class CatalogController extends Controller
             'title' => 'El Padrino. Parte II',
             'year' => '1974',
             'director' => 'Francis Ford Coppola',
-            'poster' => 'http://www.ludaksite.net/_pu/23/47139390.jpg',
+            'poster' => 'https://pics.filmaffinity.com/the_godfather_part_ii-617901053-mmed.jpg',
             'rented' => false,
             'synopsis' => 'Continuación de la historia de los Corleone por medio de dos historias paralelas: la elección de Michael Corleone como jefe de los negocios familiares y los orígenes del patriarca, el ya fallecido Don Vito, primero en Sicilia y luego en Estados Unidos, donde, empezando desde abajo, llegó a ser un poderosísimo jefe de la mafia de Nueva York.'
         ),
@@ -27,7 +27,7 @@ class CatalogController extends Controller
             'title' => 'La lista de Schindler',
             'year' => '1993',
             'director' => 'Steven Spielberg',
-            'poster' => 'http://ia.media-imdb.com/images/M/MV5BMzMwMTM4MDU2N15BMl5BanBnXkFtZTgwMzQ0MjMxMDE@._V1_SX214_AL_.jpg',
+            'poster' => 'https://pics.filmaffinity.com/schindler_s_list-473662617-mmed.jpg',
             'rented' => false,
             'synopsis' => 'Segunda Guerra Mundial (1939-1945). Oskar Schindler (Liam Neeson), un hombre de enorme astucia y talento para las relaciones públicas, organiza un ambicioso plan para ganarse la simpatía de los nazis. Después de la invasión de Polonia por los alemanes (1939), consigue, gracias a sus relaciones con los nazis, la propiedad de una fábrica de Cracovia. Allí emplea a cientos de operarios judíos, cuya explotación le hace prosperar rápidamente. Su gerente (Ben Kingsley), también judío, es el verdadero director en la sombra, pues Schindler carece completamente de conocimientos para dirigir una empresa.'
         ),
@@ -35,7 +35,7 @@ class CatalogController extends Controller
             'title' => 'Pulp Fiction',
             'year' => '1994',
             'director' => 'Quentin Tarantino',
-            'poster' => 'http://ia.media-imdb.com/images/M/MV5BMjE0ODk2NjczOV5BMl5BanBnXkFtZTYwNDQ0NDg4._V1_SY317_CR4,0,214,317_AL_.jpg',
+            'poster' => 'https://pics.filmaffinity.com/pulp_fiction-210382116-mmed.jpg',
             'rented' => true,
             'synopsis' => 'Jules y Vincent, dos asesinos a sueldo con muy pocas luces, trabajan para Marsellus Wallace. Vincent le confiesa a Jules que Marsellus le ha pedido que cuide de Mia, su mujer. Jules le recomienda prudencia porque es muy peligroso sobrepasarse con la novia del jefe. Cuando llega la hora de trabajar, ambos deben ponerse manos a la obra. Su misión: recuperar un misterioso maletín. '
         ),
@@ -43,7 +43,7 @@ class CatalogController extends Controller
             'title' => 'Cadena perpetua',
             'year' => '1994',
             'director' => 'Frank Darabont',
-            'poster' => 'http://ia.media-imdb.com/images/M/MV5BODU4MjU4NjIwNl5BMl5BanBnXkFtZTgwMDU2MjEyMDE@._V1_SX214_AL_.jpg',
+            'poster' => 'https://pics.filmaffinity.com/the_shawshank_redemption-576140557-mmed.jpg',
             'rented' => true,
             'synopsis' => 'Acusado del asesinato de su mujer, Andrew Dufresne (Tim Robbins), tras ser condenado a cadena perpetua, es enviado a la cárcel de Shawshank. Con el paso de los años conseguirá ganarse la confianza del director del centro y el respeto de sus compañeros de prisión, especialmente de Red (Morgan Freeman), el jefe de la mafia de los sobornos.'
         ),
@@ -67,7 +67,7 @@ class CatalogController extends Controller
             'title' => 'Uno de los nuestros',
             'year' => '1990',
             'director' => 'Martin Scorsese',
-            'poster' => 'http://ia.media-imdb.com/images/M/MV5BMTY2OTE5MzQ3MV5BMl5BanBnXkFtZTgwMTY2NTYxMTE@._V1_SX214_AL_.jpg',
+            'poster' => 'https://pics.filmaffinity.com/goodfellas-343032101-mmed.jpg',
             'rented' => false,
             'synopsis' => 'Henry Hill, hijo de padre irlandés y madre siciliana, vive en Brooklyn y se siente fascinado por la vida que llevan los gángsters de su barrio, donde la mayoría de los vecinos son inmigrantes. Paul Cicero, el patriarca de la familia Pauline, es el protector del barrio. A los trece años, Henry decide abandonar la escuela y entrar a formar parte de la organización mafiosa como chico de los recados; muy pronto se gana la confianza de sus jefes, gracias a lo cual irá subiendo de categoría. '
         ),
@@ -75,7 +75,7 @@ class CatalogController extends Controller
             'title' => 'Alguien voló sobre el nido del cuco',
             'year' => '1975',
             'director' => 'Milos Forman',
-            'poster' => 'http://ia.media-imdb.com/images/M/MV5BMTk5OTA4NTc0NF5BMl5BanBnXkFtZTcwNzI5Mzg3OA@@._V1_SY317_CR12,0,214,317_AL_.jpg',
+            'poster' => 'https://pics.filmaffinity.com/one_flew_over_the_cuckoo_s_nest-669408644-mmed.jpg',
             'rented' => false,
             'synopsis' => 'Randle McMurphy (Jack Nicholson), un hombre condenado por asalto, y un espíritu libre que vive contracorriente, es recluido en un hospital psiquiátrico. La inflexible disciplina del centro acentúa su contagiosa tendencia al desorden, que acabará desencadenando una guerra entre los pacientes y el personal de la clínica con la fría y severa enfermera Ratched (Louise Fletcher) a la cabeza. La suerte de cada paciente del pabellón está en juego.'
         ),
@@ -83,7 +83,7 @@ class CatalogController extends Controller
             'title' => 'American History X',
             'year' => '1998',
             'director' => 'Tony Kaye',
-            'poster' => 'http://ia.media-imdb.com/images/M/MV5BMjMzNDUwNTIyMF5BMl5BanBnXkFtZTcwNjMwNDg3OA@@._V1_SY317_CR17,0,214,317_AL_.jpg',
+            'poster' => 'https://pics.filmaffinity.com/american_history_x-201185607-mmed.jpg',
             'rented' => false,
             'synopsis' => 'Derek (Edward Norton), un joven "skin head" californiano de ideología neonazi, fue encarcelado por asesinar a un negro que pretendía robarle su furgoneta. Cuando sale de prisión y regresa a su barrio dispuesto a alejarse del mundo de la violencia, se encuentra con que su hermano pequeño (Edward Furlong), para quien Derek es el modelo a seguir, sigue el mismo camino que a él lo condujo a la cárcel.'
         ),
@@ -99,7 +99,7 @@ class CatalogController extends Controller
             'title' => 'El precio del poder',
             'year' => '1983',
             'director' => 'Brian De Palma',
-            'poster' => 'http://ia.media-imdb.com/images/M/MV5BMjAzOTM4MzEwNl5BMl5BanBnXkFtZTgwMzU1OTc1MDE@._V1_SX214_AL_.jpg',
+            'poster' => 'https://pics.filmaffinity.com/scarface-798722679-mmed.jpg',
             'rented' => false,
             'synopsis' => 'Tony Montana es un emigrante cubano frío y sanguinario que se instala en Miami con el propósito de convertirse en un gángster importante. Con la colaboración de su amigo Manny Rivera inicia una fulgurante carrera delictiva con el objetivo de acceder a la cúpula de una organización de narcos.'
         ),
@@ -107,7 +107,7 @@ class CatalogController extends Controller
             'title' => 'El pianista',
             'year' => '2002',
             'director' => 'Roman Polanski',
-            'poster' => 'http://ia.media-imdb.com/images/M/MV5BMTc4OTkyOTA3OF5BMl5BanBnXkFtZTYwMDIxNjk5._V1_SX214_AL_.jpg',
+            'poster' => 'https://pics.filmaffinity.com/the_pianist_le_pianiste-978132965-mmed.jpg',
             'rented' => true,
             'synopsis' => 'Wladyslaw Szpilman, un brillante pianista polaco de origen judío, vive con su familia en el ghetto de Varsovia. Cuando, en 1939, los alemanes invaden Polonia, consigue evitar la deportación gracias a la ayuda de algunos amigos. Pero tendrá que vivir escondido y completamente aislado durante mucho tiempo, y para sobrevivir tendrá que afrontar constantes peligros.'
         ),
@@ -123,7 +123,7 @@ class CatalogController extends Controller
             'title' => 'El silencio de los corderos',
             'year' => '1991',
             'director' => 'Jonathan Demme',
-            'poster' => 'http://ia.media-imdb.com/images/M/MV5BMTQ2NzkzMDI4OF5BMl5BanBnXkFtZTcwMDA0NzE1NA@@._V1_SX214_AL_.jpg',
+            'poster' => 'https://pics.filmaffinity.com/the_silence_of_the_lambs-767447992-mmed.jpg',
             'rented' => false,
             'synopsis' => 'El FBI busca a "Buffalo Bill", un asesino en serie que mata a sus víctimas, todas adolescentes, después de prepararlas minuciosamente y arrancarles la piel. Para poder atraparlo recurren a Clarice Starling, una brillante licenciada universitaria, experta en conductas psicópatas, que aspira a formar parte del FBI. Siguiendo las instrucciones de su jefe, Jack Crawford, Clarice visita la cárcel de alta seguridad donde el gobierno mantiene encerrado a Hannibal Lecter, antiguo psicoanalista y asesino, dotado de una inteligencia superior a la normal. Su misión será intentar sacarle información sobre los patrones de conducta de "Buffalo Bill".'
         ),
@@ -131,7 +131,7 @@ class CatalogController extends Controller
             'title' => 'La naranja mecánica',
             'year' => '1971',
             'director' => 'Stanley Kubrick',
-            'poster' => 'http://ia.media-imdb.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_SY317_CR0,0,214,317_AL_.jpg',
+            'poster' => 'https://pics.filmaffinity.com/a_clockwork_orange-964766200-mmed.jpg',
             'rented' => false,
             'synopsis' => 'Gran Bretaña, en un futuro indeterminado. Alex (Malcolm McDowell) es un joven muy agresivo que tiene dos pasiones: la violencia desaforada y Beethoven. Es el jefe de la banda de los drugos, que dan rienda suelta a sus instintos más salvajes apaleando, violando y aterrorizando a la población. Cuando esa escalada de terror llega hasta el asesinato, Alex es detenido y, en prisión, se someterá voluntariamente a una innovadora experiencia de reeducación que pretende anular drásticamente cualquier atisbo de conducta antisocial.'
         ),
@@ -155,7 +155,7 @@ class CatalogController extends Controller
             'title' => 'Taxi Driver',
             'year' => '1976',
             'director' => 'Martin Scorsese',
-            'poster' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Taxi_driver_movieposter.jpg/220px-Taxi_driver_movieposter.jpg',
+            'poster' => 'https://pics.filmaffinity.com/taxi_driver-173769074-mmed.jpg',
             'rented' => false,
             'synopsis' => 'Para sobrellevar el insomnio crónico que sufre desde su regreso de Vietnam, Travis Bickle (Robert De Niro) trabaja como taxista nocturno en Nueva York. Es un hombre insociable que apenas tiene contacto con los demás, se pasa los días en el cine y vive prendado de Betsy (Cybill Shepherd), una atractiva rubia que trabaja como voluntaria en una campaña política. Pero lo que realmente obsesiona a Travis es comprobar cómo la violencia, la sordidez y la desolación dominan la ciudad. Y un día decide pasar a la acción.'
         ),
@@ -177,7 +177,7 @@ class CatalogController extends Controller
 
     public function getShow($id = 1)
     {
-        return view('catalog.show')->with('id', $id);
+        return view('catalog.show')->with('arrayPeliculas', $this->arrayPeliculas[$id])->with('id', $id);
     }
 
     public function getCreate()
@@ -187,7 +187,7 @@ class CatalogController extends Controller
 
     public function getEdit($id = 1)
     {
-        return view('catalog.edit', ['id' => $id]);
+        return view('catalog.edit')->with('arrayPeliculas', $this->arrayPeliculas[$id])->with('id', $id);
     }
 
 }
