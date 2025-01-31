@@ -12,8 +12,8 @@ class CatalogController extends Controller
     //La funcion getIndex() devuelve la vista catalog.index con el array de peliculas
     public function getIndex()
     {
-        //$todasPeliculas = Movie::all();
-        return view('catalog.index')->with('arrayPeliculas', DB::table('movies')->get());
+        $todasPeliculas = Movie::all();
+        return view('catalog.index')->with('arrayPeliculas', $todasPeliculas);
     }
 
     public function getShow($id = 1)
@@ -60,7 +60,8 @@ class CatalogController extends Controller
         $pelicula->synopsis = $request->input('synopsis');
         $pelicula->save();
         // Devolvemos la vista de la película editada
-        return view('catalog.show', ['arrayPeliculas' => $pelicula])->with('id', $id)->with('msg', 2);
+        return view('catalog.show')->with('arrayPeliculas', $pelicula)->with('id', $id)->with('msg', 2);
+        //return view('catalog.show', ['arrayPeliculas' => $pelicula])->with('id', $id)->with('msg', 2);
     }
 
     public function putRent($id)

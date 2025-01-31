@@ -37,7 +37,7 @@
                             <strong class="font-bold">¡Éxito!</strong>
                             <span class="block sm:inline">La película se ha eliminado correctamente.</span>
                         </div>
-                        @elseif (session('msg') == 5)
+                    @elseif (session('msg') == 5)
                         {{-- Película añadida correctamente --}}
                         <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
                             role="alert">
