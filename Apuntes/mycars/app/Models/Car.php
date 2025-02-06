@@ -11,4 +11,12 @@ class Car extends Model
     /** @use HasFactory<\Database\Factories\CarFactory> */
     use HasFactory;
     use SoftDeletes;
+
+    protected $guarded = [];
+
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
 }

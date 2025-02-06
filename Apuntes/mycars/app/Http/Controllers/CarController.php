@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Car;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CarController extends Controller
 {
@@ -12,7 +13,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        //
+        return view('cars.index');
     }
 
     /**
@@ -20,7 +21,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        //
+        return view('cars.create');
     }
 
     /**
@@ -28,7 +29,32 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'plate' => 'required|unique:cars,plate',
+            'brand' => 'required',
+            'model' => 'required',
+            'year' => 'required|integer',
+            'color' => 'required',
+            'last_inspection' => 'required|date',
+            'price' => 'required|numeric',
+            'photo' => 'required|image',
+        ]);
+
+        $car = new Car();
+        $car->plate = $request->plate;
+        $car->brand = $request->brand;
+        $car->model = $request->model;
+        $car->year = $request->year;
+        $car->color = $request->color;
+        $car->last_inspection = $request->last_inspection;
+        $car->price = $request->price;
+        $car->user_id = Auth::id();
+
+        // Para guardar la imagen
+        $nombreFoto = time() . '-' . $request->file('photo')->getClientOriginalName();
+        $car->photo = $nombreFoto;
+
+        $car->save();
     }
 
     /**
