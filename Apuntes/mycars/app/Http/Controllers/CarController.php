@@ -8,6 +8,7 @@ use Exception;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Storage;
 
 class CarController extends Controller
 {
@@ -77,7 +78,10 @@ class CarController extends Controller
      */
     public function show(Car $car)
     {
-        //
+        // También se puede hacer con el id obtenido de la URL con el método find
+        // $car = Car::find($id);
+        $url = 'storage/img_cars/';
+        return view('cars.show')->with('car', $car)->with('url', $url);
     }
 
     /**
@@ -85,7 +89,8 @@ class CarController extends Controller
      */
     public function edit(Car $car)
     {
-        //
+        $url = 'storage/img_cars/';
+        return view('cars.edit')->with('car', $car)->with('url', $url);
     }
 
     /**
@@ -93,7 +98,43 @@ class CarController extends Controller
      */
     public function update(Request $request, Car $car)
     {
-        //
+        $request->validate([
+            'plate' => 'required|unique:cars,plate,'.$car->id.',id,deleted_at,null', // Comprueba que la matrícula sea única, excepto en el registro actual
+            'brand' => 'required',
+            'model' => 'required',
+            'year' => 'required|integer',
+            'color' => 'required',
+            'last_inspection' => 'required|date',
+            'price' => 'required|numeric',
+            'photo' => 'image',
+        ]);
+
+        try {
+            
+            $car->plate = $request->plate;
+            $car->brand = $request->brand;
+            $car->model = $request->model;
+            $car->year = $request->year;
+            $car->color = $request->color;
+            $car->last_inspection = $request->last_inspection;
+            $car->price = $request->price;
+
+            // Para guardar la imagen si se ha subido una nueva
+            if (is_uploaded_file($request->file('photo'))) {
+                // Borramos la imagen anterior
+                Storage::delete('img_cars/' . $car->photo);
+                $nombreFoto = time() . '-' . $request->file('photo')->getClientOriginalName();
+                $car->photo = $nombreFoto;
+                // Para guardar la imagen en el servidor
+                $request->file('photo')->storeAs('img_cars', $nombreFoto);
+            }
+
+            $car->save();
+
+            return to_route('cars.index')->with('msg', 'Coche editado correctamente');
+        } catch (QueryException $e) {
+            return to_route('cars.index')->with('msg', 'Error al editar el coche');
+        }
     }
 
     /**
@@ -101,6 +142,11 @@ class CarController extends Controller
      */
     public function destroy(Car $car)
     {
-        //
+        try {
+            $car->delete();
+            return to_route('cars.index')->with('msg', 'Coche eliminado correctamente');
+        } catch (Exception $e) {
+            return to_route('cars.index')->with('msg', 'Error al eliminar el coche');
+        }
     }
 }
