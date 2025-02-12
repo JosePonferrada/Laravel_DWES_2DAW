@@ -95,7 +95,7 @@
                                         </td>
                                         <td class="px-6 py-4 text-center flex justify-center"> 
                                             <a href="{{ route('cars.show', ['car' => $car->id]) }}"><button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Detalles</button></a>
-                                            <a href="{{ route('cars.edit', ['car' => $car->id]) }}"><button type="button" class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900">Editar</button></a>
+                                            <a href="{{ route('cars.edit', ['car' => $car->id]) }}"><button type="button" class="text-black bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900">Editar</button></a>
                                             <form action="{{ route('cars.destroy', ['car' => $car->id]) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
@@ -117,4 +117,17 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Llamamos al componente de livewire -->
+    <div class="py-2">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 bg-white border-b border-gray-200">
+                    @livewire('car-list', ['name' => Auth::user()->name])
+                </div>
+            </div>
+        </div>
+    </div>
+
 </x-app-layout>

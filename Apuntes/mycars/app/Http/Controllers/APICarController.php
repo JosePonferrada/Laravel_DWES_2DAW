@@ -21,7 +21,9 @@ class APICarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Si queremos validar los datos que nos llegan lo podemos hacer con el método validate
+        $car = Car::create($request->all());
+        return response()->json(['status' => 'true', 'car' => $car, 'message' => 'Coche creado'], 201);
     }
 
     /**
@@ -42,7 +44,13 @@ class APICarController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $car = Car::find($id);
+        if ($car) {
+            $car->update($request->all());
+            return response()->json(['status' => 'true', 'car' => $car, 'message' => 'Coche actualizado'], 200);
+        } else {
+            return response()->json(['status' => 'false', 'message' => 'Coche no encontrado'], 404);
+        }
     }
 
     /**
@@ -50,6 +58,12 @@ class APICarController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $car = Car::find($id);
+        if ($car) {
+            $car->delete();
+            return response()->json(['status' => 'true', 'message' => 'Coche eliminado'], 200);
+        } else {
+            return response()->json(['status' => 'false', 'message' => 'Coche no encontrado'], 404);
+        }
     }
 }
