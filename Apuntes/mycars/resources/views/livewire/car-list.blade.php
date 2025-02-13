@@ -195,4 +195,8 @@
         @endif        
     </div>
 
+    <div class="mt-4">
+        @livewire('create-car')
+    </div>
+
 </div>

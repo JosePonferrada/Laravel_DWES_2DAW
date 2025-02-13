@@ -4,14 +4,16 @@ namespace App\Livewire;
 
 use App\Models\Car;
 use Livewire\Component;
+use Livewire\Attributes\On;
 
+#[On('alert')]
 class CarList extends Component
 {
 
     // Para acceder a los datos desde la vista, los tenemos que definir en el componente como propiedades públicas
     public $name;
     public $buscador;
-    public $field = 'brand';
+    public $field = 'id';
     public $direction = 'asc';
 
     public function render()
