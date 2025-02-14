@@ -94,6 +94,9 @@
                     @error('photo')
                         <div class="text-red-500">{{ $message }}</div>
                     @enderror
+                    <div wire:loading> 
+                        Se está cargando la foto...
+                    </div>
                 </div>
                 <!-- Precio -->
                 <div class="relative z-0 w-full mb-5 group">

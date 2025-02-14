@@ -187,12 +187,19 @@
                 @endforeach
             </tbody>
         </table>
-
+        <div class="p-4">   <!-- Si lo ponemos aquí nos ahorramos el if de abajo -->
+            {{ $cars->links() }} <!-- Así recarga todo, para que haga solo la actualización del componente nos vamos a la clase -->
+        </div>
         @else
             <div class="p-4">
                 No hay coches que mostrar con el filtro introducido.
             </div>
-        @endif        
+        @endif
+        {{-- @if ($cars->hasPages()) 
+            <div class="p-4">
+                {{ $cars->links() }} <!-- Así recarga todo, para que haga solo la actualización del componente nos vamos a la clase -->
+            </div>
+        @endif --}}
     </div>
 
     <div class="mt-4">
